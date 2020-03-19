@@ -2,8 +2,8 @@ import React from 'react'
 
 class Navbar extends React.Component {
     constructor(props) {
-        super(props);
-        this.navbarLinks = ['Home', 'Awesome Bootcamp Blog', 'Projects', 'Links', 'Contact', 'About'];
+        super(props)
+        this.navbarLinks = ['Home', 'Awesome Bootcamp Blog', 'Projects', 'Links', 'Contact', 'About']
     }
 
     render() {

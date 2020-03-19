@@ -6,9 +6,14 @@ import './App.css';
 
 class App extends React.Component {
     constructor(props) {
-        super(props);
-        this.state = { currentPage: 'Home' };
-        this.updatePage = this.updatePage.bind(this);
+        super(props)
+        this.state = { currentPage: 'Home' }
+        this.updatePage = this.updatePage.bind(this)
+    }
+
+    updatePage(newPage) {
+        //console.log("in the update page function", newPage)
+        this.setState({ currentPage: newPage })
     }
 
     render() {
@@ -21,8 +26,8 @@ class App extends React.Component {
                     </p>
 
                     <div>
-                        <Clock />
-                        <Clock />
+                        <Navbar />
+                        {/* <Clock /> */}
                     </div>
                     <a
                         className="App-link"
