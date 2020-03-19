@@ -1,33 +1,41 @@
 import React from 'react';
 import logo from './logo.svg';
-import clock from './clock.js';
+import Clock from './clock.js';
+import Navbar from './Navbar';
 import './App.css';
 
-function App() {
-    return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                    
-                </p>
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { currentPage: 'Home' };
+        this.updatePage = this.updatePage.bind(this);
+    }
 
-    <div>
-                    <Clock />
-                    <Clock />
-                </div>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-        </a>
-            </header>
-        </div>
-    );
+    render() {
+        return (
+            <div className="App">
+                <header className="App-header">
+                    <img src={logo} className="App-logo" alt="logo" />
+                    <p>
+                        Edit <code>src/App.js</code> and save to reload.
+                    </p>
+
+                    <div>
+                        <Clock />
+                        <Clock />
+                    </div>
+                    <a
+                        className="App-link"
+                        href="https://reactjs.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Learn React with Dave O.
+                    </a>
+                </header>
+            </div>
+        );
+    }
 }
 
 class Clock2 extends React.Component {
