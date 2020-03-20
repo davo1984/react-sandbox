@@ -9,19 +9,21 @@ class Navbar extends React.Component {
     render() {
         const navLinksinHTML = this.navbarLinks.map((link, idx) => {
             return (
-                <a onClick={() => this.props.updatePage(link)}
-                className = 'pl-2'
-                href = '#'
-                key = {idx}
-                >
-                    {link}
-                </a>
+                <React.Fragment key={idx}>
+                    <a onClick={() => this.props.updatePage(link)}
+                        className = 'pl-2'
+                        href = '#'
+                    >
+                        {link}
+                    </a>
+				{ this.navbarLinks.length - 1 === index ? null : (<p>-</p>) }
+				</React.Fragment >
             )
         })
         return (
-            <h3>
+            <h2>
                 {navLinksinHTML}
-            </h3>
+            </h2>
         )
     }
 }
